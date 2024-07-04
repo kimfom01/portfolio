@@ -3,27 +3,35 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 ---
 
-<BaseLayout title = "Projects" sideBarActiveItemID="projects">
+<BaseLayout title="Projects" sideBarActiveItemID="projects">
   <div>
-    <div class="text-3xl w-full font-bold mb-5">Projects Header</div>
+    <div class="text-3xl w-full font-bold mb-5">Recent Projects</div>
   </div>
 
   <HorizontalCard
-    title="Demo Project 1"
+    title="Hotel Reservation System"
     img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+    desc="This is a web application where people search for hotels based on their city and place bookings. It features asyncronous communication between components to enable loose coupling and increase the maintainability. It also features email notifications to guest upon successfuly booking and payment. Programing languages used: C# and TypeScript. Frameworks used: ASP.NET Core, React. Major libraries: Entity Framework Core, Mediatr, Mass Transit. Patterns used: CQRS, Repository, Unit of Work. Architecture: Clean Architecture (layered)"
+    url="https://github.com/kimfom01/HotelReservationSystem"
     badge="NEW"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
-    title="Demo Project 2"
+    title="Imagizer"
     img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
+    desc="Imagizer is a web application for manipulating images. The current supported features include: image resizing and conversion with support for several formats. It integrates MinIO object storage and a third-party URL shortener, enabling 2-day image persistency and shareable processed images. Programming languages used: C#, Frameworks used: ASP.NET Core. Major libraries used: Magick.NET. Architecture: 3 layer"
+    url="https://github.com/kimfom01/Imagizer"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Sports Result Notifier"
+    img="/sports-results-notifier.webp"
+    desc="Developed a sports data scraper bot that extracts top game results from a sports website, leveraging HTML Agility Pack and C#. Designed and implemented an automated email feature, utilizing Gmail, to send the extracted data to a destination email address."
+    url="https://github.com/kimfom01/SportsResultNotifier"
+    badge="FOSS"
   />
 
-  <div>
+  <!-- <div>
     <div class="text-3xl w-full font-bold mb-5 mt-10">Projects Header</div>
   </div>
 
@@ -47,5 +55,5 @@ import HorizontalCard from "../components/HorizontalCard.astro";
     img="/post_img.webp"
     desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     url="#"
-  />
+  /> -->
 </BaseLayout>
