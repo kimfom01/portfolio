@@ -6,7 +6,7 @@ heroImage: "/dependency_injection.webp"
 tags:
   [
     "ioc",
-    "C#",
+    "csharp",
     "dependency injection",
     "asp.net core",
     "net core",
