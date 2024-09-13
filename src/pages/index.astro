@@ -30,20 +30,33 @@ const last_posts = posts.slice(0, 3);
     <div class="mt-8">
       <a
         class="btn btn-outline"
-        href="https://twitter.com/kimographie"
+        href="https://www.linkedin.com/in/kim-fom"
         target="_blank"
       >
         Let's connect!</a
       >
-      <!-- <a
-        href="https://github.com/manuelernestog/astrofy"
-        target="_blank"
-        class="btn btn-outline ml-5"
-      >
-        Get This template
-      </a> -->
     </div>
   </div>
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
+  </div>
+
+  {
+    last_posts.map((post) => (
+      <>
+        <HorizontalCard
+          title={post.data.title}
+          img={post.data.heroImage}
+          desc={post.data.description}
+          url={"/blog/" + createSlug(post.data.title, post.slug)}
+          target="_self"
+          badge={post.data.badge}
+        />
+        <div class="divider my-0" />
+      </>
+    ))
+  }
 
   <div>
     <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
@@ -71,24 +84,4 @@ const last_posts = posts.slice(0, 3);
     url="https://github.com/kimfom01/SportsResultNotifier"
     badge="FOSS"
   />
-
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
-  </div>
-
-  {
-    last_posts.map((post) => (
-      <>
-        <HorizontalCard
-          title={post.data.title}
-          img={post.data.heroImage}
-          desc={post.data.description}
-          url={"/blog/" + createSlug(post.data.title, post.slug)}
-          target="_self"
-          badge={post.data.badge}
-        />
-        <div class="divider my-0" />
-      </>
-    ))
-  }
 </BaseLayout>
